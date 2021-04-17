@@ -1,0 +1,174 @@
+body .zsiq_floatmain {
+	z-index: 10!important;
+}
+.pointer {
+  cursor: pointer;
+}
+.center-block {
+  margin: 1em auto 1em;
+  display: table
+}
+.fw-500 {
+  font-weight: 500
+}
+body .thankyou-msg {
+  display: none;
+  text-align: center;
+  margin-bottom: 0;
+}
+.blogs-popup   { 
+    padding: 2em 0;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    position: relative;
+    background-color: #f9f8ff;
+}
+.blogs-popup .modal {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+.blog-popup-bg {
+	border-radius: 5px;
+    box-shadow: 1px 1px 20px 0 rgba(149, 149, 177, .6);
+    background: #fff url(/images/contact-form-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(-50%, -50%) !important;
+    top: 50% !important;
+    left: 50% !important;
+    position: absolute;
+    min-height: auto !important;
+    max-width: 100%;
+}
+.blog-close i {
+	color: var(--main-dark-blue-color);
+}
+.blog-popup-bg{
+	
+}
+.blog-popup-bg h3 {
+	text-align: center !important;
+    display: block;
+    width: 100%;
+}
+#blog-form .container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /*display: inline-flex;
+    width: 33%;*/
+}
+#blog-form .form-input {
+  margin-bottom: 12px;
+}
+       /* Hide the browser's default checkbox */
+#blog-form .container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+#blog-form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+#blog-form .container-checkbox:hover input ~  .checkmark {
+  background-color: var(--main-green-color);
+}
+
+/* When the checkbox is checked, add a blue background */
+#blog-form .container-checkbox input:checked ~  .checkmark {
+  background-color: var(--main-green-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+#blog-form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+}
+
+/* Show the checkmark when checked */
+#blog-form .container-checkbox input:checked ~  .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+#blog-form .container-checkbox .checkmark:after {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+ font-size: 12px;
+    line-height: 32px;
+    color: var(--main-dark-blue-color);
+    font-weight: 700;
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+  
+}
+
+@media (max-width: 1199px) {
+   .blog-popup-bg {
+        width: 65%;
+    }
+    
+
+}
+
+@media (max-width: 991px) {
+.blog-popup-bg {
+    width: 80%;
+}
+}
+@media (max-width: 767px) {
+  .blog-head {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+    #blog-form .container-checkbox {
+        width: 100%
+    }
+    
+    .blog-popup-bg h3 {
+    	margin-bottom: 0;
+    	font-size: 20px;
+    }
+}
+@media (max-width: 575px) {
+	#blog-form .col-sm-6 {
+		-ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+	}
+	.blog-popup-bg {
+    width: 95%;
+}
+#blog-form .col-sm-6:nth-child(odd) {
+	padding-right: 0;
+}
+}
+
+@media (max-width: 360px) {
+  .mob-scren {
+    display: block;
+    margin-bottom: 0.5em;
+    margin-right: 0
+  }
+ }

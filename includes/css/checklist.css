@@ -1,0 +1,601 @@
+:root {
+    --main-dark-blue-color: #1b48b2;
+    --main-light-blue-color: #2666fe;
+    --main-green-color: #3feb98;
+    --main-white-color: #ffffff;
+    --main-black-color: #000000;
+    --font-16: 16px;
+    --font-18: 18px;
+    --font-weight-500: 500;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: none !important;
+}
+
+.full-wrapper {
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 2em;
+    font-size: 18px;
+}
+
+.pt-1 {
+    padding-top: 1em;
+}
+
+.pt-2 {
+    padding-top: 2em !important;
+}
+
+.pt-3 {
+    padding-top: 3em;
+}
+
+.pb3 {
+    padding-bottom: 3em;
+}
+
+.ptb-3 {
+    padding: 3em 0;
+}
+
+.ptb-5 {
+    padding: 5em 0;
+}
+
+.ptb-83 {
+    padding: 8em 0 3em;
+}
+
+.ptb-8 {
+    padding: 8em 0;
+}
+
+.pl-40 {
+    padding-left: 40px;
+}
+
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.f22 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.tab-show-btn,
+.tab-show {
+    display: none !important;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.mtb-1 {
+    margin: 1em 0;
+}
+
+.mb-half {
+    margin-bottom: 0.5em !important;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.pad0 {
+    padding: 0 !important;
+}
+
+.clear-fix::after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+
+/*CHECKLIST BODY*/
+
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-right: 2em;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* display: inline-flex;
+    width: 33%;*/
+}
+
+
+/* Hide the browser's default checkbox */
+
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--main-green-color);
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.container-checkbox:hover input~.checkmark {
+    background-color: var(--main-green-color);
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container-checkbox input:checked~.checkmark {
+    background-color: var(--main-green-color);
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container-checkbox .checkmark::after {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    line-height: 32px;
+    color: var(--main-dark-blue-color);
+    font-weight: 700;
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+}
+
+.checklist-page .main-heading {
+    max-width: none !important;
+}
+
+.checklist-header {
+    padding: 10px;
+}
+
+.clist-h3 {
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    margin: 1em !important;
+    padding-bottom: 1em;
+    display: inline-flex;
+}
+
+.clist-h3:after {
+    background-color: #39ca86;
+    width: 2.5rem;
+    height: .1875rem;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.clist-h4 {
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1em;
+    display: inline-flex;
+}
+
+.check-list li {
+    padding: 0.5em 0 0 0.5em;
+    margin-left: 1em;
+    list-style: decimal;
+}
+
+
+/*.check-list li p::before  {
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 5px;
+    border-radius: 100%;
+    background-color: var(--main-green-color);
+    }*/
+
+.cl-dot {
+    color: var(--main-green-color);
+    font-size: 8px;
+    margin-top: 12px;
+    display: none
+}
+
+
+/*.check-list li::after {
+    padding-right: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--main-light-blue-color);
+    font-weight: 700;
+    font-family: "Font Awesome 5 Free";
+    content: '\f14a';
+    display: inline-flex;
+}*/
+
+.check-list li p {
+    display: inline-flex;
+    width: 95%;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 1em;
+    padding-right: 1em
+}
+
+.br {
+    border-right: 1px solid #ccc
+}
+
+.hr {
+    border-bottom: 1px solid #ccc;
+    margin: 1em 0;
+}
+
+.clist {
+    margin-bottom: 2em
+}
+
+.checklist-footer {
+    background-color: var(--main-dark-blue-color);
+    padding: 1em 0;
+}
+
+.checklist-footer a {
+    color: var(--main-white-color);
+    text-align: center;
+    display: block;
+}
+
+
+/*CHECKLIST POPUP*/
+
+.checklist-popup {
+    padding-top: 0
+}
+
+.share-icons {
+    margin: 0 auto;
+    display: table;
+}
+
+.share-icons li {
+    display: inline-block;
+    padding: 0 1em;
+}
+
+.share-icons li:hover .side-icon {
+    background-color: var(--main-green-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.center-block {
+    margin: 1em auto 1em;
+    display: table
+}
+
+.fw-500 {
+    font-weight: 500
+}
+
+body .thankyou-msg {
+    display: none;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.blogs-popup {
+    padding: 2em 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+    position: relative;
+    background-color: #f9f8ff;
+}
+
+.blogs-popup .modal {
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+
+.blog-popup-bg {
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px 0 rgba(149, 149, 177, .6);
+    background: #fff url(/images/contact-form-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(-50%, -50%) !important;
+    top: 50% !important;
+    left: 50% !important;
+    position: absolute;
+    min-height: auto !important;
+    max-width: 100%;
+}
+
+.blog-close i {
+    color: var(--main-dark-blue-color);
+}
+
+.blog-popup-bg {}
+
+.blog-popup-bg h3 {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+}
+
+#blog-form .container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*display: inline-flex;
+    width: 33%;*/
+}
+
+#blog-form .form-input {
+    margin-bottom: 12px;
+}
+
+
+/* Hide the browser's default checkbox */
+
+#blog-form .container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom checkbox */
+
+#blog-form .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+#blog-form .container-checkbox:hover input~.checkmark {
+    background-color: var(--main-green-color);
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+#blog-form .container-checkbox input:checked~.checkmark {
+    background-color: var(--main-green-color);
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+#blog-form .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+#blog-form .container-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+#blog-form .container-checkbox .checkmark:after {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    line-height: 32px;
+    color: var(--main-dark-blue-color);
+    font-weight: 700;
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+}
+
+.auto-main {
+    margin-left: 5.7px;
+}
+
+.top-download-btn .btn-blue {
+    /* float: right; */
+    width: 169px;
+}
+
+.center-block .btn-blue {
+    width: 174px;
+}
+
+.checklist-icon {
+    width: 7%;
+    height: auto;
+}
+
+@media (max-width: 1199px) {
+    .blog-popup-bg {
+        width: 65%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .automation-mb {
+        width: 77%;
+    }
+}
+
+@media (max-width: 991px) {
+    .blog-popup-bg {
+        width: 80%;
+    }
+}
+
+@media(max-width:800px) {
+    .top-download-btn .btn-blue,
+    .top-download-btn .xs-block {
+        margin: 0 auto!important;
+        display: block;
+        float: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .checklist-footer a {
+        margin-bottom: 1em !important;
+    }
+    .checklist-page {
+        background-color: #F7FAFE !important;
+    }
+    .br {
+        border-right: none !important;
+    }
+    .clist {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+    }
+    .clist::last-child {
+        border-bottom: none !important;
+    }
+    .blog-head {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+    #blog-form .container-checkbox {
+        width: 100%
+    }
+    .blog-popup-bg h3 {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    /*#blog-form .col-sm-6 {
+        -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    }*/
+    .blog-popup-bg {
+        width: 95%;
+        margin: 0 auto;
+    }
+    /*#blog-form .col-sm-6:nth-child(odd) {
+    padding-right: 0;
+}*/
+    .checklist-page .logo-div {
+        margin: 1em auto;
+        display: table;
+    }
+    .checklist-page .google-partner-logo {
+        width: 50%;
+        margin: 0 auto 1em;
+    }
+}
+
+@media (max-width: 375px) {
+    .checklist-page .google-partner-logo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 357px) {
+    .xs-block {
+        display: block;
+        margin-left: 0 !important;
+    }
+}

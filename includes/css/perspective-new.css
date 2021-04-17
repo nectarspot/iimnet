@@ -1,0 +1,117 @@
+.pt-120 {
+    padding-top: 120px;
+}
+
+.color {
+    padding: 2.5rem 2.1875rem;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 2.1875rem 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 2.1875rem 0 rgba(0, 0, 0, 0.07);
+    border-radius: 0.25rem;
+    margin-bottom: 2em;
+}
+
+.color:hover {
+    background-color: var(--main-dark-blue-color);
+    color: #fff;
+}
+
+.pers-head {
+    font-size: 16px;
+}
+
+.filter-img {
+    filter: invert(1);
+    margin-bottom: 1em;
+}
+
+.color:hover .filter-img {
+    filter: invert(0);
+}
+
+/* SHOPIFY LANDING PAGE  */
+/*Case-study-shopify*/
+
+.case-studies .case-study {
+    -webkit-box-shadow: 0 0 2.1875rem 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 2.1875rem 0 rgba(0, 0, 0, 0.07);
+}
+
+.case-studies .case-study p {
+    padding: 2em;
+    font-weight: 600;
+}
+
+.case-studies .case-study p:hover {
+    color: var(--main-dark-blue-color)
+}
+
+.case-studies .case-study a {
+    color: #000;
+}
+
+.case-studies .case-study .cs-image:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    content: '';
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.case-studies .case-study .cs-image:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    ;
+    opacity: 1;
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.case-studies .case-study:hover .cs-image:before {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+}
+
+.case-studies .case-study:hover .cs-image:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+}
+
+.cs-image {
+    position: relative;
+}
+
+
+
+
+
+@media (max-width:991px) {
+    .perspective .btn-blue {
+        margin: 15px auto;
+        display: table;
+    }
+}
+
+@media (max-width:767px) {
+    .pt-120 {
+        padding-top: 0;
+    }
+}

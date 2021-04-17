@@ -1,0 +1,81 @@
+.cs-inner-box img {
+    border-bottom: 5px solid var(--main-dark-blue-color);
+}
+.grid-item {
+    height: 500px;
+}
+.filters {
+width: 100%;
+text-align: center;
+}
+
+.filters ul {
+list-style: none;
+padding: 20px 0;
+}
+
+.filters li.active:before, .filters li:hover:before {
+opacity: 1;
+}
+.filters li.active, .filters li:hover {
+background-color: var(--main-dark-blue-color) !important;
+border-bottom: 5px solid var(--main-green-color);
+}
+.filters li {
+position: relative;
+}
+.filters li::before {
+content: "";
+position: absolute;
+left: calc(50% - 10px);
+top: 100%;
+width: 0;
+height: 0;
+border-left: 12px solid transparent;
+border-right: 12px solid transparent;
+border-top: 12px solid var(--main-green-color);
+transition: transform .2s ease;
+will-change: transform;
+opacity: 0;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.read-btn {
+    display: block;
+    padding: 20px;
+    border-top: 1px solid #fcf7f7;
+}
+.cs-inner-box {
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,.1);
+-moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,.1);
+box-shadow: 0px 10px 20px 0px rgba(0,0,0,.1);
+border-radius: 6px;
+background-color: #fff;
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+.cs-inner-box-text {
+    padding: 20px 20px 0;
+    display: flex;
+flex-direction: column;
+height: 100%;
+}
+.cs-inner-box-text p {
+    font-size: 16px !important;
+}
+.cs-client-name {
+    font-size: 20px;
+font-weight: 600;
+color: var(--main-dark-blue-color);
+}
+
+@media (max-width: 767px) {
+.grid-item {
+height: auto !important;}
+.mob-w-100 {
+width: 100% !important;
+text-align: center;
+}
+}
